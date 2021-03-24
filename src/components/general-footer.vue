@@ -2,7 +2,7 @@
   <div class="container">
     <div class="item">
       <p id="brand">United States <span>of</span> a Study Group</p>
-      <p id="disclaimer">Ing Tian All Rights Reserved</p>
+      <p id="disclaimer">®Ing Tian All Rights Reserved</p>
     </div>
   </div>
 </template>
@@ -28,20 +28,23 @@ export default {
   width: auto;
   height: auto;
   color: white;
-  font-family: Arial;
+  font-family: Roboto,sans-serif;
   font-weight: 400;
+  font-size: 20px;
+
+  text-align: center;
 }
 
 #brand span {
-  font-family: "Noto Sans Gothic";
+  font-family: "Times New Roman", serif;
   font-style: italic;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 #disclaimer {
-  font-family: "Times New Roman";
+  font-family: 'Playfair Display SC', serif;
   font-style: normal;
-  font-size: 12px;
-  font-weight: 100;
+  font-size: 14px;
+  font-weight: 300;
 }
 </style>
