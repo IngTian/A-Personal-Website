@@ -8,6 +8,9 @@
       <router-link to="/" class="navigation-link">
         <li>Home Page</li>
       </router-link>
+      <router-link to="/log-in" class="navigation-link">
+        <li>Log In</li>
+      </router-link>
     </ul>
   </div>
 </template>
