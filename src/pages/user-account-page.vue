@@ -80,7 +80,8 @@
         </div>
       </div>
       <div class="section">
-        <section-title title="Edit Info" sub-title="Edit Profile"></section-title>
+        <section-title title="Appointments" sub-title="see booked appointments"></section-title>
+        <appointment-table :appointments="getAppointments"></appointment-table>
       </div>
     </div>
   </div>
@@ -157,7 +158,7 @@ export default {
 }
 
 .section {
-  width: 85%;
+  width: 90%;
   margin-top: 50px;
   margin-bottom: 20px;
 

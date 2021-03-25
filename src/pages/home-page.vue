@@ -90,6 +90,16 @@ export default {
     getImagePath: function (imageFileName) {
       return require(`.././assets/img/${imageFileName}`)
     }
+  },
+  created() {
+    // Get business information.
+    let businessInfo = {
+      businessName: "McGill Repair Shop",
+      businessAddress: "6666 Rue Mcgill Montreal Canada.",
+      businessPhoneNo: "1234567899"
+    }
+
+    localStorage.setItem('businessInfo', JSON.stringify(businessInfo))
   }
 }
 </script>

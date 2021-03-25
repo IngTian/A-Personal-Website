@@ -11,6 +11,7 @@ import HorizontalGallery from "@/components/horizontal-gallery";
 import vueCustomScrollbar from 'vue-custom-scrollbar';
 import UserNavigationPanel from "@/components/user-navigation-panel"
 import ActionButton from "@/components/action-button"
+import AppointmentTable from "@/components/appointment-table"
 
 Vue.config.productionTip = false
 
@@ -22,6 +23,7 @@ Vue.component('horizontal-gallery', HorizontalGallery)
 Vue.component('vue-custom-scroll-bar', vueCustomScrollbar)
 Vue.component('user-navigation-panel', UserNavigationPanel)
 Vue.component('action-button', ActionButton)
+Vue.component('appointment-table', AppointmentTable)
 
 new Vue({
     router: router,

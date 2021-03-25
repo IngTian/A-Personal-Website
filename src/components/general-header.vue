@@ -2,7 +2,7 @@
   <div class="main-container">
     <div class="logo"><p>US<span> of </span>SG</p></div>
     <ul class="navigation">
-      <router-link to="/hello-world" class="navigation-link">
+      <router-link to="/about" class="navigation-link">
         <li>About</li>
       </router-link>
       <router-link to="/" class="navigation-link">
