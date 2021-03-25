@@ -1,10 +1,10 @@
 <template>
   <div class="root">
     <div class="nav-container">
-      <router-link to="welcome" class="link">Welcome</router-link>
-      <router-link to="edit-info" class="link">Update Account</router-link>
-      <router-link to="manage-appointment" class="link">Appointments</router-link>
-      <router-link to="make-appointment" class="link">Booking</router-link>
+      <router-link to="/user/welcome" class="link">Welcome</router-link>
+      <router-link to="/user/edit-info" class="link">Update Account</router-link>
+      <router-link to="/user/manage-appointment" class="link">Appointments</router-link>
+      <router-link to="/user/make-appointment" class="link">Booking</router-link>
     </div>
   </div>
 </template>
