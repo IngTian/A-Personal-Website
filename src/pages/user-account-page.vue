@@ -81,7 +81,7 @@
       </div>
       <div class="section">
         <section-title title="Appointments" sub-title="see booked appointments"></section-title>
-        <appointment-table :appointments="getAppointments"></appointment-table>
+        <appointment-table v-bind:appointments="getAppointments"></appointment-table>
       </div>
     </div>
   </div>
@@ -103,7 +103,7 @@ export default {
   },
   mounted() {
     // Load user info from local storage.
-    this.customerInfo = JSON.parse(localStorage.getItem('userInformation'))
+    this.customerInfo = JSON.parse(localStorage.getItem('userInformation'));
   },
   computed: {
     getUsername: function () {
@@ -131,7 +131,7 @@ export default {
     },
 
     getAppointments: function () {
-      return this.customerInfo.assignments;
+      return this.customerInfo.appointments;
     },
 
     getEditInfoButtonText: function () {
@@ -155,13 +155,14 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section {
   width: 90%;
   margin-top: 50px;
   margin-bottom: 20px;
-
 }
 
 .view-info-row {
