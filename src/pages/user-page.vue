@@ -35,7 +35,6 @@ export default {
   grid-template-rows: auto;
   grid-template-areas:
     "nav content"
-    "nav helper";
 }
 
 .content {

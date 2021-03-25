@@ -20,11 +20,13 @@ export default {
 .root{
   grid-area: nav;
   margin-right: 1.5rem;
+
 }
 
 .nav-container{
   width: 100%;
   height: 100%;
+
   background-color: #191919;
 }
 
