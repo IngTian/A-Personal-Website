@@ -10,7 +10,7 @@ import UserPage from "@/pages/user-page"
 Related to user operations.
  */
 import UserWelcomePage from "@/pages/user-welcome-page"
-import UserEditInformation from "@/pages/user-edit-information"
+import UserAccountPage from "@/pages/user-account-page"
 import UserManageAppointment from "@/pages/user-manage-component"
 import UserMakeAppointment from "@/pages/user-make-appointment"
 
@@ -27,8 +27,8 @@ const routes = [
                 component: UserWelcomePage
             },
             {
-                path: "edit-info",
-                component: UserEditInformation
+                path: "account",
+                component: UserAccountPage
             },
             {
                 path: "manage-appointment",
