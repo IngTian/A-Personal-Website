@@ -17,7 +17,27 @@ export default {
       password: "aPassword",
       address: "1234 Ile Street, Palm Beach, Florida",
       phoneNo: "1123345566",
-      email: "hello@world.edu"
+      email: "hello@world.edu",
+
+      // Some appointments
+      appointments: [
+        {
+          date: "2021-03-25",
+          startTime: "09:25",
+          endTime: "10:38",
+          serviceType: "Study arts",
+          price: "$100",
+          isPaid: false
+        },
+        {
+          date: "2021-03-24",
+          startTime: "09:25",
+          endTime: "10:38",
+          serviceType: "Study arts",
+          price: "$100",
+          isPaid: false
+        }
+      ]
     }
     if (!localStorage.getItem('userInformation'))
       localStorage.setItem('userInformation', JSON.stringify(userInformation))
@@ -39,6 +59,7 @@ export default {
 
 .content {
   grid-area: content;
+  grid-template: none;
 }
 
 .fade-enter-active,

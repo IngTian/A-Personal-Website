@@ -10,6 +10,7 @@ import RedButton from "@/components/button";
 import HorizontalGallery from "@/components/horizontal-gallery";
 import vueCustomScrollbar from 'vue-custom-scrollbar';
 import UserNavigationPanel from "@/components/user-navigation-panel"
+import ActionButton from "@/components/action-button"
 
 Vue.config.productionTip = false
 
@@ -20,6 +21,7 @@ Vue.component('red-button', RedButton)
 Vue.component('horizontal-gallery', HorizontalGallery)
 Vue.component('vue-custom-scroll-bar', vueCustomScrollbar)
 Vue.component('user-navigation-panel', UserNavigationPanel)
+Vue.component('action-button', ActionButton)
 
 new Vue({
     router: router,

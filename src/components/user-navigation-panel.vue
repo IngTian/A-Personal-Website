@@ -2,7 +2,7 @@
   <div class="root">
     <div class="nav-container">
       <router-link to="/user/welcome" class="link">Welcome</router-link>
-      <router-link to="/user/edit-info" class="link">Update Account</router-link>
+      <router-link to="/user/account" class="link">Account</router-link>
       <router-link to="/user/manage-appointment" class="link">Appointments</router-link>
       <router-link to="/user/make-appointment" class="link">Booking</router-link>
     </div>
