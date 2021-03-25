@@ -7,17 +7,21 @@ import Footer from "@/components/general-footer";
 import Header from "@/components/general-header";
 import SectionTitle from "@/components/section-title";
 import RedButton from "@/components/button";
-import HorizontalGallery from "@/components/horizontal-gallery"
+import HorizontalGallery from "@/components/horizontal-gallery";
+import vueCustomScrollbar from 'vue-custom-scrollbar';
+import UserNavigationPanel from "@/components/user-navigation-panel"
 
 Vue.config.productionTip = false
 
-Vue.component(Header)
-Vue.component(Footer)
-Vue.component(SectionTitle)
-Vue.component(RedButton)
-Vue.component(HorizontalGallery)
+Vue.component("general-header", Header)
+Vue.component('general-footer', Footer)
+Vue.component('section-title', SectionTitle)
+Vue.component('red-button', RedButton)
+Vue.component('horizontal-gallery', HorizontalGallery)
+Vue.component('vue-custom-scroll-bar', vueCustomScrollbar)
+Vue.component('user-navigation-panel', UserNavigationPanel)
 
 new Vue({
-  router: router,
-  render: h => h(App),
+    router: router,
+    render: h => h(App),
 }).$mount('#app')

@@ -39,6 +39,11 @@
         </div>
       </transition>
 
+      <div style="display: table">
+        <div style="display: table-cell"></div>
+        <div style="display: table-cell"></div>
+      </div>
+
     </div>
 
     <div style="position: absolute; bottom: -50px; width: 100%; height: max-content">
@@ -69,7 +74,7 @@ export default {
       address: "",
       selectedStyle: {
         backgroundColor: "black"
-      }
+      },
     }
   },
   computed: {
@@ -143,7 +148,7 @@ export default {
   transition: ease .5s;
 }
 
-.selector-box:hover{
+.selector-box:hover {
   background-color: darkgray;
 }
 
@@ -151,7 +156,8 @@ export default {
   transition: opacity 0.3s ease-in-out;
 }
 
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
+{
   opacity: 0;
 }
 
