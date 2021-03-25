@@ -157,6 +157,7 @@ export default {
   justify-content: space-around;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 100px;
 }
 
 .section {

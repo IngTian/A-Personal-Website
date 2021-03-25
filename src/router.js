@@ -11,7 +11,6 @@ Related to user operations.
  */
 import UserWelcomePage from "@/pages/user-welcome-page"
 import UserAccountPage from "@/pages/user-account-page"
-import UserManageAppointment from "@/pages/user-manage-component"
 import UserMakeAppointment from "@/pages/user-make-appointment"
 
 const routes = [
@@ -29,10 +28,6 @@ const routes = [
             {
                 path: "account",
                 component: UserAccountPage
-            },
-            {
-                path: "manage-appointment",
-                component: UserManageAppointment
             },
             {
                 path: "make-appointment",
