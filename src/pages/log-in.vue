@@ -25,8 +25,8 @@
           <input class="form-input" v-model="address" placeholder="Address" style="width: 76%; margin-bottom: 20px">
           <input class="form-input" v-model="username" placeholder="Username" style="width: 76%; margin-bottom: 20px">
           <input class="form-input" v-model="password" placeholder="Password" style="width: 76%; margin-bottom: 40px">
-          <red-button destination="/" background-color="red" text="SIGN UP"
-                      style="width: 200px; height: 60px"></red-button>
+          <action-button background-color="black" text="SIGN UP"
+                         style="width: 200px; height: 60px" v-on:clicked="signUpButtonClicked"></action-button>
         </div>
         <div v-else class="form-container" key="logInForm">
           <div class="title">
@@ -34,8 +34,8 @@
           </div>
           <input class="form-input" v-model="username" placeholder="Username" style="width: 76%; margin-bottom: 20px">
           <input class="form-input" v-model="password" placeholder="Password" style="width: 76%; margin-bottom: 40px">
-          <red-button destination="/" background-color="red" text="LOG IN"
-                      style="width: 200px; height: 60px"></red-button>
+          <action-button background-color="black" text="LOG IN"
+                         style="width: 200px; height: 60px"></action-button>
         </div>
       </transition>
 
@@ -55,11 +55,15 @@
 </template>
 
 <script>
-import RedButton from "@/components/button";
+
+import axios from "axios"
+
+var AXIOS = axios.create({
+  baseURL: "http://192.168.3.52:8080",
+})
 
 export default {
   name: "log-in",
-  components: {RedButton},
   data: function () {
     return {
       title: "Sign Up Now!",
@@ -94,6 +98,34 @@ export default {
     logInSelectorClicked: function () {
       this.displayLogIn = true;
       this.displaySignUp = false;
+    },
+    signUpButtonClicked: function () {
+      let name = this.firstName + " " + this.lastName;
+      let username = this.username;
+      let password = this.password;
+      let email = this.email;
+      let address = this.address;
+      let phoneNo = this.phoneNo;
+
+      let response = Object
+
+      AXIOS.post("users/customers/create_to_most_recent_system",
+          {
+            // Request body
+            username: username,
+            password: password,
+            name: name,
+            phoneNo: phoneNo,
+            homeAddress: address,
+            email: email
+          },
+      ).then(resp => {
+        response = resp;
+        console.log(response)
+      }).catch(e => {
+        console.error(e.toString())
+      })
+
     }
   }
 }

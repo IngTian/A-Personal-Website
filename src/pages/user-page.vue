@@ -60,6 +60,7 @@ export default {
 .content {
   grid-area: content;
   grid-template: none;
+  padding-left: 40px;
 }
 
 .fade-enter-active,

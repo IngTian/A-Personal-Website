@@ -88,6 +88,7 @@
 </template>
 
 <script>
+
 export default {
   name: "user-account-page",
   data: function () {

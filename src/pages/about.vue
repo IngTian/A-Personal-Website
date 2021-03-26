@@ -2,10 +2,11 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h3>McGill Repair Shop</h3>
-    <h3>Contact Number</h3>
+    <h3 @click="isFuckYOU=true">Contact Number</h3>
+    <p v-if="isFuckYOU">FUCK YOU</p>
     <ul>
       <p>
-        123123123 {{getBusinessAddress}} {{getBusinessName}} {{getBusinessPhoneNo}}
+        123123123 {{ getBusinessAddress }} {{ getBusinessName }} {{ getBusinessPhoneNo }}
       </p>
     </ul>
     <h3>Address</h3>
@@ -25,7 +26,8 @@ export default {
   },
   data: function () {
     return {
-      businessInfo: Object
+      businessInfo: Object,
+      isFuckYOU: false
     }
   },
   mounted() {
