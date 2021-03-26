@@ -3,66 +3,66 @@
     <div class="container">
       <div class="section">
         <section-title title="View Basic Info" sub-title="You looks great!"></section-title>
-        <div class="view-info-row">
-          <div class="view-info-row-description">Username:</div>
-          <div class="view-info-row-information">{{ getUsername }}</div>
+        <div class="order-info-row">
+          <div class="order-info-row-description">Username:</div>
+          <div class="order-info-row-information">{{ getUsername }}</div>
         </div>
-        <div class="view-info-row">
-          <div class="view-info-row-description">Password:</div>
+        <div class="order-info-row">
+          <div class="order-info-row-description">Password:</div>
           <transition name="fade" mode="out-in">
-            <div class="view-info-row-information" v-if="!isUpdatingBasicInformation" key="display">{{
+            <div class="order-info-row-information" v-if="!isUpdatingBasicInformation" key="display">{{
                 getPassword
               }}
             </div>
-            <div class="view-info-row-information" v-else>
+            <div class="order-info-row-information" v-else>
               <input class="form-input" v-model="updatedPassword" key="input">
             </div>
           </transition>
         </div>
-        <div class="view-info-row">
-          <div class="view-info-row-description">Name:</div>
+        <div class="order-info-row">
+          <div class="order-info-row-description">Name:</div>
           <transition name="fade" mode="out-in">
-            <div class="view-info-row-information" v-if="!isUpdatingBasicInformation" key="display">{{
+            <div class="order-info-row-information" v-if="!isUpdatingBasicInformation" key="display">{{
                 getName
               }}
             </div>
-            <div class="view-info-row-information" v-else>
+            <div class="order-info-row-information" v-else>
               <input class="form-input" v-model="updatedName" key="input">
             </div>
           </transition>
         </div>
-        <div class="view-info-row">
-          <div class="view-info-row-description">Address:</div>
+        <div class="order-info-row">
+          <div class="order-info-row-description">Address:</div>
           <transition name="fade" mode="out-in">
-            <div class="view-info-row-information" v-if="!isUpdatingBasicInformation" key="display">{{
+            <div class="order-info-row-information" v-if="!isUpdatingBasicInformation" key="display">{{
                 getAddress
               }}
             </div>
-            <div class="view-info-row-information" v-else>
+            <div class="order-info-row-information" v-else>
               <input class="form-input" v-model="updatedAddress" key="input">
             </div>
           </transition>
         </div>
-        <div class="view-info-row">
-          <div class="view-info-row-description">Phone No:</div>
+        <div class="order-info-row">
+          <div class="order-info-row-description">Phone No:</div>
           <transition name="fade" mode="out-in">
-            <div class="view-info-row-information" v-if="!isUpdatingBasicInformation" key="display">{{
+            <div class="order-info-row-information" v-if="!isUpdatingBasicInformation" key="display">{{
                 getPhoneNo
               }}
             </div>
-            <div class="view-info-row-information" v-else>
+            <div class="order-info-row-information" v-else>
               <input class="form-input" v-model="updatedPhoneNo" key="input">
             </div>
           </transition>
         </div>
-        <div class="view-info-row">
-          <div class="view-info-row-description">Email:</div>
+        <div class="order-info-row">
+          <div class="order-info-row-description">Email:</div>
           <transition name="fade" mode="out-in">
-            <div class="view-info-row-information" v-if="!isUpdatingBasicInformation" key="display">{{
+            <div class="order-info-row-information" v-if="!isUpdatingBasicInformation" key="display">{{
                 getEmail
               }}
             </div>
-            <div class="view-info-row-information" v-else>
+            <div class="order-info-row-information" v-else>
               <input class="form-input" v-model="updatedEmail" key="input">
             </div>
           </transition>
@@ -167,7 +167,7 @@ export default {
   margin-bottom: 20px;
 }
 
-.view-info-row {
+.order-info-row {
   width: 100%;
   height: 2.7em;
   margin-top: 10px;
@@ -175,7 +175,7 @@ export default {
   display: table;
 }
 
-.view-info-row-description {
+.order-info-row-description {
   height: 100%;
   display: table-cell;
   text-align: right;
@@ -184,7 +184,7 @@ export default {
   font-family: Roboto, sans-serif;
 }
 
-.view-info-row-information {
+.order-info-row-information {
   width: 60%;
   height: 100%;
   padding-left: 10px;

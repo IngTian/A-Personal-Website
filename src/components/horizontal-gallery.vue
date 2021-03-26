@@ -2,7 +2,7 @@
   <div class="root">
     <transition-group name="list-complete" tag="div" class="container">
       <div class="exhibition" v-for="image in filteredImages" :key="image.id">
-        <div class="img">
+        <div class="img" @click="$emit('image-selected', image.title)">
           <div :style="{'backgroundImage': `url('${getImageUrl(image)}')`}"></div>
         </div>
         <div class="description">
@@ -26,13 +26,13 @@ export default {
   data: function () {
     return {
       startingIndex: 0,
-      maximumLength: 7,
       prevCharacter: "<",
       nextCharacter: ">",
     }
   },
   props: {
-    images: Array
+    images: Array,
+    maximumLength: Number
   },
   computed: {
     filteredImages: function () {

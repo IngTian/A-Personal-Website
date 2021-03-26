@@ -12,10 +12,6 @@ Related to user operations.
 import UserWelcomePage from "@/pages/user-welcome-page"
 import UserAccountPage from "@/pages/user-account-page"
 import UserMakeAppointment from "@/pages/user-make-appointment"
-import CustomerAppointmentChooseDate from "@/pages/customer-appointment-choose-date"
-import CustomerAppointmentChooseShift from "@/pages/customer-appointment-choose-shift"
-import CustomerAppointmentChooseServiceType from "@/pages/customer-appointment-choose-service-type"
-import CustomerAppointmentReviewInfo from "@/pages/customer-appointment-review-info"
 
 const routes = [
     {path: '/', name: '/', component: HomePage},
@@ -35,25 +31,7 @@ const routes = [
             },
             {
                 path: "make-appointment",
-                component: UserMakeAppointment,
-                children: [
-                    {
-                        path: "choose-date",
-                        component: CustomerAppointmentChooseDate
-                    },
-                    {
-                        path: "choose-shift",
-                        component: CustomerAppointmentChooseShift
-                    },
-                    {
-                        path: "choose-service-type",
-                        component: CustomerAppointmentChooseServiceType
-                    },
-                    {
-                        path: "review-order",
-                        component: CustomerAppointmentReviewInfo
-                    }
-                ]
+                component: UserMakeAppointment
             }
         ]
     },

@@ -5,24 +5,21 @@
         <div class="date-column title-font">DATE</div>
         <div class="start-time-column title-font">START TIME</div>
         <div class="end-time-column title-font">END TIME</div>
-        <div class="service-type-column title-font">SERVICE TYPE</div>
-        <div class="price-column title-font">PRICE</div>
-        <div class="select-column title-font">PAY</div>
+        <div class="select-column title-font">SELECT</div>
       </div>
 
       <transition-group name="list-complete" tag="div">
-        <div class="shift-row" v-for="appointment in this.appointments" :key="appointment.date">
-          <div class="date-column">{{ appointment.date }}</div>
-          <div class="start-time-column">{{ appointment.startTime }}</div>
-          <div class="end-time-column">{{ appointment.endTime }}</div>
-          <div class="service-type-column">{{ appointment.serviceType }}</div>
-          <div class="price-column">{{ appointment.price }}</div>
+        <div class="shift-row" v-for="shift in this.shifts" :key="shift.date">
+          <div class="date-column">{{ shift.date }}</div>
+          <div class="start-time-column">{{ shift.startTime }}</div>
+          <div class="end-time-column">{{ shift.endTime }}</div>
           <transition name="fade" mode="out-in">
-            <div class="select-column select-button" v-if="!appointment.isPaid" @click="makePayment(appointment)">
-              Pay
+            <div class="select-column select-button" v-if="!isSelected(shift.shiftId)"
+                 @click="selectAShift(shift.shiftId); $emit('selected', shift.shiftId)">
+              Select
             </div>
             <div class="select-column" v-else>
-              Paid
+              Selected
             </div>
           </transition>
         </div>
@@ -33,14 +30,22 @@
 
 <script>
 export default {
-  name: "appointment-table",
-  props: {
-    appointments: Array
+  name: "shifts-table",
+  data: function () {
+    return {
+      selectedShiftId: null
+    }
   },
-  methods:{
-    makePayment:function (appointment){
-      console.log(appointment)
-      appointment.isPaid = true
+  props: {
+    shifts: Array
+  },
+  methods: {
+    isSelected: function (shiftId) {
+      return this.selectedShiftId === shiftId
+    },
+
+    selectAShift: function (shiftId) {
+      this.selectedShiftId = shiftId;
     }
   }
 }
@@ -99,24 +104,6 @@ export default {
   text-align: center;
 }
 
-.service-type-column {
-  display: table-cell;
-  width: 20%;
-  height: 100%;
-  font-size: 20px;
-  line-height: 2.7em;
-  text-align: center;
-}
-
-.price-column {
-  display: table-cell;
-  width: 10%;
-  height: 100%;
-  font-size: 20px;
-  line-height: 2.7em;
-  text-align: center;
-}
-
 .select-column {
   display: table-cell;
   width: 10%;
@@ -132,15 +119,15 @@ export default {
   font-family: "Playfair Display SC", serif;
 }
 
-.select-button{
+.select-button {
   color: lightblue;
   font-style: italic;
-  transition:  .5s ease;
+  transition: .5s ease;
 }
 
-.select-button:hover{
+.select-button:hover {
   color: blue;
-  transition:  .5s ease;
+  transition: .5s ease;
 }
 
 .list-complete-enter-from,

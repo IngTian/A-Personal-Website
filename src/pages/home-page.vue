@@ -10,7 +10,7 @@
       </div>
     </div>
     <section-title title="Reading List" sub-title="Drinking darkness and pouring out light"></section-title>
-    <horizontal-gallery :images="galleryImages"></horizontal-gallery>
+    <horizontal-gallery :images="galleryImages" :maximum-length="galleryMaxLength"></horizontal-gallery>
     <section-title title="Current Projects" sub-title="Acta Non Verba"></section-title>
     <div class="projects">
       <div class="project" v-for="activity in activities" :key="activity.id"
@@ -83,7 +83,9 @@ export default {
           description: "Computer Vision, NLP, et cetera",
           id: 3
         },
-      ]
+      ],
+
+      galleryMaxLength: 7
     };
   },
   methods: {

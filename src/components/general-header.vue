@@ -29,6 +29,10 @@ export default {
   margin-top: 0;
   background-color: black;
 
+  top: 0;
+  position: sticky;
+  z-index: 5;
+
   font-family: Arial, sans-serif;
   font-style: normal;
   font-size: 20px;
